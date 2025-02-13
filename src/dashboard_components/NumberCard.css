@@ -1,0 +1,76 @@
+.gradient-card {
+    background: linear-gradient(to bottom right, #2c3e50, #244888); /* Gradient with dark blue shades */
+    color: white; /* Default card text color */
+    border: none; /* Remove card border */
+    border-radius: 10px;
+}
+
+.gradient-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6c757d; /* Light gray text */
+    margin-bottom: 10px;
+}
+
+.reading-meter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Space between digits */
+}
+
+.digit-container {
+    overflow: hidden;
+    height: 50px; /* Adjust to match the gradient card size */
+    width: 30px; /* Digit width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #212529; /* Dark background for the digit container */
+}
+
+.gradient-digit {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(#6c757d, #ffffff); /* Gray to white gradient for digits */
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; Make the gradient apply to text */
+    animation: scrollDigit 0.5s ease-in-out forwards;
+}
+
+/* Digit scrolling animation */
+@keyframes scrollDigit {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Button for refresh */
+button {
+    box-shadow: none;
+    background: #6c757d; /* Gray button background */
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #244888; /* Highlighted button color */
+}
+
+.digit {
+    background: transparent !important; /* Remove black background */
+    color: inherit; /* Keep the text color */
+    font-weight: bold;
+    font-size: 2rem; /* Adjust size if needed */
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
